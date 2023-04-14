@@ -27,7 +27,6 @@ warmStrategyCache({
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
 // TODO: Implement asset caching
-const { StaleWhileRevalidate } = require('workbox-strategies');
 
 const assetsCache = new StaleWhileRevalidate({
   cacheName: 'assets-cache',
