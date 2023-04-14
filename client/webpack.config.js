@@ -27,7 +27,7 @@ module.exports = () => {
       // Webpack plugin injects bundles
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'neatNotes'
+        title: 'JATE'
       }),
 
        // Inject manifest
