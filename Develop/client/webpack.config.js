@@ -24,13 +24,13 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      // Webpack plugin that generates our html file and injects our bundles
+      // Webpack plugin injects bundles
       new HtmlWebpackPlugin({
         template: './index.html',
         title: 'neatNotes'
       }),
 
-       // Injects our custom service worker
+       // Inject manifest
        new InjectManifest({
         swSrc: './src-sw.js',
         swDest: 'src-sw.js',
@@ -67,7 +67,7 @@ module.exports = () => {
         {
           test: /\.m?js$/,
           exclude: /node_modules/,
-          // We use babel-loader in order to use ES6.
+          // babel-loader for ES6.
           use: {
             loader: 'babel-loader',
             options: {
