@@ -35,7 +35,7 @@ export const getDb = async () => {
   console.log('GET from db');
   // opens database
   const db = await openDB('jate', 1);
-  // starts new transaction
+  // starts new transaction passing in 'read only' and object store name
   const tx = db.transaction('jate', 'readonly');
   // request to store content
   // stores content in 'jate' objectStore
