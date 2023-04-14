@@ -40,7 +40,7 @@ module.exports = () => {
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        name: 'Lil Notes',
+        name: 'JATE',
         short_name: 'JATE',
         description: 'Note Saver',
         background_color: '#225ca3',
