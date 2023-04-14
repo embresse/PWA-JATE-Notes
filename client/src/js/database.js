@@ -27,7 +27,7 @@ const request = store.put({ id: 1, value: content });
 // waits for request 
 const result = await request; 
 // returns request once request is complete
-console.log('🚀 - data saved to the database', result);
+console.log('🚀 - data saved to the database', result.value);
 };
 
 // TODO: Add logic for a method that gets all the content from the database
@@ -41,9 +41,8 @@ export const getDb = async () => {
   // stores content in 'jate' objectStore
   const store = tx.objectStore('jate');
   // gets content from 'jate' objectStore w key value of '1'
-  const request = store.get(1);
+  const result = store.get(1);
   // waits for request
-  const result = await request;
   result
     ? console.log('🚀 - data retrieved from the database', result.value)
     : console.log('🚀 - data not found in the database');
